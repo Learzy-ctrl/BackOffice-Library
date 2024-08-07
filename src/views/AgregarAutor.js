@@ -54,7 +54,6 @@ const AgregarAutor = () => {
         reader.onloadend = async () => {
           const byteArray = new Uint8Array(reader.result);
           const base64String = btoa(String.fromCharCode(...byteArray));
-
           try {
             await axios.post('http://localhost:4321/api/AutorImage', {
               guid,
